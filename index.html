@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Теплоизоляция трубопроводов и оборудования — Москва и МО</title>
+<meta name="description" content="Профессиональная теплоизоляция трубопроводов, инженерного оборудования, тепловых пунктов и холодильного оборудования. Вспененный каучук, минеральная вата, окожушка из оцинковки, алюминия, нержавейки. Термочехлы. Выезд на замер.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    color: #1e2a38;
+    line-height: 1.6;
+    background: #f7f9fc;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { display: block; max-width: 100%; }
+
+  /* HEADER */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: #0b2239; color: #fff;
+    padding: 14px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .logo { font-size: 20px; font-weight: 700; letter-spacing: .5px; }
+  .logo span { color: #ffb300; }
+  .header-contacts { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; font-size: 15px; }
+  .header-contacts a:hover { color: #ffb300; }
+  .phone-btn {
+    background: #ffb300; color: #0b2239 !important;
+    padding: 8px 16px; border-radius: 6px; font-weight: 700;
+    transition: .2s;
+  }
+  .phone-btn:hover { background: #ffc933; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0b2239 0%, #154a7a 100%);
+    color: #fff; padding: 70px 0;
+  }
+  .hero h1 { font-size: 38px; line-height: 1.2; margin-bottom: 18px; max-width: 800px; }
+  .hero h1 span { color: #ffb300; }
+  .hero p { font-size: 18px; max-width: 700px; margin-bottom: 30px; opacity: .92; }
+  .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 14px 28px; border-radius: 8px;
+    font-weight: 600; font-size: 16px; cursor: pointer;
+    transition: .25s; border: none;
+  }
+  .btn-primary { background: #ffb300; color: #0b2239; }
+  .btn-primary:hover { background: #ffc933; transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: #fff; border: 2px solid #ffb300; }
+  .btn-outline:hover { background: #ffb300; color: #0b2239; }
+
+  /* SECTIONS */
+  section { padding: 70px 0; }
+  .section-title { font-size: 30px; text-align: center; margin-bottom: 12px; color: #0b2239; }
+  .section-sub { text-align: center; color: #5a6a7b; max-width: 700px; margin: 0 auto 45px; }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;
+  }
+  .service-card {
+    background: #fff; border-radius: 12px; padding: 28px 24px;
+    box-shadow: 0 4px 18px rgba(11,34,57,.08);
+    border-top: 4px solid #ffb300; transition: .25s;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 26px rgba(11,34,57,.14); }
+  .service-card .icon { font-size: 32px; margin-bottom: 14px; display: inline-block; }
+  .service-card h3 { font-size: 18px; margin-bottom: 10px; color: #0b2239; }
+  .service-card p { font-size: 15px; color: #4b5a6b; }
+
+  /* MATERIALS с фото */
+  .materials { background: #eef3f9; }
+  .materials-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;
+  }
+  .material-card {
+    background: #fff; border-radius: 12px; overflow: hidden;
+    box-shadow: 0 4px 16px rgba(11,34,57,.07);
+    transition: .25s;
+    display: flex; flex-direction: column;
+  }
+  .material-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(11,34,57,.14); }
+  .material-card .photo {
+    width: 100%; height: 210px; overflow: hidden; background: #dde5ee;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .material-card .photo img {
+    width: 100%; height: 100%; object-fit: contain; padding: 10px; transition: .4s;
+  }
+  .material-card:hover .photo img { transform: scale(1.06); }
+  .material-card .body { padding: 22px; flex: 1; }
+  .material-card h3 { color: #154a7a; font-size: 18px; margin-bottom: 10px; }
+  .material-card p { font-size: 15px; color: #4b5a6b; }
+
+  /* GALLERY / WORKS */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+  }
+  .gallery-item {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #dde5ee;
+    box-shadow: 0 4px 14px rgba(11,34,57,.08);
+    transition: .25s;
+  }
+  .gallery-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform .5s;
+  }
+  .gallery-item:hover img { transform: scale(1.08); }
+  .gallery-item::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(11,34,57,.7) 0%, transparent 55%);
+    opacity: 0; transition: opacity .25s;
+  }
+  .gallery-item:hover::after { opacity: 1; }
+  .gallery-caption {
+    position: absolute; left: 14px; bottom: 12px; right: 14px;
+    color: #fff; font-size: 14px; font-weight: 600;
+    opacity: 0; transform: translateY(8px);
+    transition: .25s; z-index: 2;
+  }
+  .gallery-item:hover .gallery-caption { opacity: 1; transform: translateY(0); }
+
+  /* LIGHTBOX */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 999;
+    background: rgba(7,26,43,.94);
+    display: none;
+    align-items: center; justify-content: center;
+    padding: 20px;
+    animation: fadeIn .2s;
+  }
+  .lightbox.active { display: flex; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .lightbox img {
+    max-width: 92vw; max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.6);
+  }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 26px;
+    color: #fff; font-size: 40px; font-weight: 300;
+    cursor: pointer; line-height: 1;
+  }
+  .lightbox-close:hover { color: #ffb300; }
+  .lightbox-caption {
+    position: absolute; bottom: 24px; left: 0; right: 0;
+    text-align: center; color: #fff; font-size: 15px;
+    padding: 0 20px;
+  }
+
+  /* ADVANTAGES */
+  .adv-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;
+  }
+  .adv-item { text-align: center; padding: 20px 10px; }
+  .adv-item .num {
+    font-size: 40px; font-weight: 800; color: #ffb300; line-height: 1;
+    margin-bottom: 8px;
+  }
+  .adv-item .label { font-size: 15px; color: #33475b; }
+
+  /* CTA / CONTACTS */
+  .contacts { background: #0b2239; color: #fff; }
+  .contacts .section-title { color: #fff; }
+  .contacts .section-sub { color: #c2d1e0; }
+  .contact-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px; margin-top: 30px;
+  }
+  .contact-card {
+    background: rgba(255,255,255,.06); border-radius: 12px; padding: 26px;
+    border: 1px solid rgba(255,255,255,.12); text-align: center;
+  }
+  .contact-card h4 { color: #ffb300; font-size: 15px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+  .contact-card a, .contact-card p { font-size: 19px; font-weight: 600; color: #fff; }
+  .contact-card a:hover { color: #ffb300; }
+
+  .cta-band {
+    background: #ffb300; color: #0b2239; padding: 40px 0; text-align: center;
+  }
+  .cta-band h2 { font-size: 26px; margin-bottom: 10px; }
+  .cta-band p { font-size: 17px; margin-bottom: 20px; }
+  .cta-band .btn-primary { background: #0b2239; color: #fff; }
+  .cta-band .btn-primary:hover { background: #154a7a; }
+
+  /* FOOTER */
+  footer {
+    background: #071a2b; color: #93a5b8; padding: 28px 0;
+    text-align: center; font-size: 14px;
+  }
+  footer a { color: #ffb300; }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 27px; }
+    .hero p { font-size: 16px; }
+    .header-inner { flex-direction: column; text-align: center; }
+    .header-contacts { justify-content: center; }
+    .section-title { font-size: 24px; }
+    .gallery { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+    .gallery-item { height: 160px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container header-inner">
+    <div class="logo">ТЕПЛО<span>ИЗОЛЯЦИЯ</span></div>
+    <div class="header-contacts">
+      <a href="mailto:vit727@mail.ru">✉ vit727@mail.ru</a>
+      <a href="tel:+79776306374" class="phone-btn">📞 8 977 630-63-74</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Теплоизоляция трубопроводов и <span>инженерного оборудования</span> под ключ</h1>
+    <p>Профессиональные услуги по теплоизоляции тепловых пунктов, холодильного оборудования и трубопроводов в Москве и Московской области. Работаем с современными материалами и изготавливаем термочехлы для нестандартного оборудования.</p>
+    <div class="hero-btns">
+      <a href="tel:+79776306374" class="btn btn-primary">Заказать замер</a>
+      <a href="#works" class="btn btn-outline">Наши работы</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Наши услуги</h2>
+    <p class="section-sub">Комплексные решения по изоляции для промышленных, коммерческих и инженерных объектов</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">🛠️</div>
+        <h3>Изоляция трубопроводов</h3>
+        <p>Тепло- и гидроизоляция технологических и инженерных трубопроводов любого диаметра.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">⚙️</div>
+        <h3>Инженерное оборудование</h3>
+        <p>Изоляция насосов, теплообменников, запорной арматуры и ёмкостей.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🔥</div>
+        <h3>Тепловые пункты</h3>
+        <p>Теплоизоляция ИТП, ЦТП, котельных — снижение теплопотерь и защита персонала.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">❄️</div>
+        <h3>Холодильное оборудование</h3>
+        <p>Изоляция фреоновых трасс, чиллеров, холодильных камер и установок.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🛡️</div>
+        <h3>Окожушка из металла</h3>
+        <p>Покрытия из оцинковки, алюминия и нержавеющей стали для наружной изоляции.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">📐</div>
+        <h3>Термочехлы</h3>
+        <p>Индивидуальный пошив съёмных термочехлов для нестандартного оборудования.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS with PHOTOS -->
+<section class="materials" id="materials">
+  <div class="container">
+    <h2 class="section-title">Материалы</h2>
+    <p class="section-sub">Используем только проверенные изоляционные материалы с гарантией качества</p>
+    <div class="materials-grid">
+
+      <!-- 1. Вспененный каучук (Трубки) - ВАШЕ ФОТО 2 -->
+      <div class="material-card">
+        <div class="photo">
+          <img src="images/material-kauchuk-tubes.jpg"
+               alt="Вспененный каучук — трубки"
+               loading="lazy"
+               onerror="this.src='https://placehold.co/600x400/154a7a/ffffff?text=Вспененный+каучук+трубки'">
+        </div>
+        <div class="body">
+          <h3>Вспененный каучук (трубки)</h3>
+          <p>Эластичная тепло- и пароизоляция с закрытой ячеистой структурой. Идеален для холодильных и инженерных систем.</p>
+        </div>
+      </div>
+
+      <!-- 2. Вспененный каучук (Рулоны) - ВАШЕ ФОТО 3 -->
+      <div class="material-card">
+        <div class="photo">
+          <img src="images/material-kauchuk-roll.jpg"
+               alt="Вспененный каучук — рулоны и листы"
+               loading="lazy"
+               onerror="this.src='https://placehold.co/600x400/154a7a/ffffff?text=Вспененный+каучук+рулоны'">
+        </div>
+        <div class="body">
+          <h3>Вспененный каучук (рулоны)</h3>
+          <p>Листовой материал для изоляции плоских поверхностей, воздуховодов и крупных емкостей.</p>
+        </div>
+      </div>
+
+      <!-- 3. Минеральная вата (Цилиндры) - ВАШЕ ФОТО 1 -->
+      <div class="material-card">
+        <div class="photo">
+          <img src="images/material-minvata.jpg"
+               alt="Минеральная вата — цилиндры"
+               loading="lazy"
+               onerror="this.src='https://placehold.co/600x400/154a7a/ffffff?text=Минеральная+вата'">
+        </div>
+        <div class="body">
+          <h3>Минеральная вата</h3>
+          <p>Цилиндры и маты из каменной ваты (в т.ч. с фольгой) для высокотемпературных трубопроводов и промышленного оборудования.</p>
+        </div>
+      </div>
+
+      <!-- 4. Металлическая окожушка (Пока заглушка, можно добавить фото позже) -->
+      <div class="material-card">
+        <div class="photo">
+          <img src="images/material-okozhushka.jpg"
+               alt="Металлическая окожушка — оцинковка, алюминий, нержавейка"
+               loading="lazy"
+               onerror="this.src='https://placehold.co/600x400/154a7a/ffffff?text=Металлоокожушка'">
+        </div>
+        <div class="body">
+          <h3>Металлическая окожушка</h3>
+          <p>Оцинковка, алюминий, нержавеющая сталь — защита изоляции от атмосферных воздействий и механических повреждений.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WORKS / GALLERY -->
+<section id="works">
+  <div class="container">
+    <h2 class="section-title">Выполненные работы</h2>
+    <p class="section-sub">Реальные объекты в Москве и Московской области — тепловые пункты, холодильное оборудование, трубопроводы</p>
+    <div class="gallery" id="gallery">
+
+      <div class="gallery-item" data-caption="Изоляция трубопроводов ИТП — вспененный каучук + окожушка">
+        <img src="images/work-1.jpg" alt="Изоляция трубопроводов ИТП"
+             loading="lazy"
+             onerror="this.src='https://placehold.co/600x400/0b2239/ffb300?text=Работа+1+ИТП'">
+        <div class="gallery-caption">Изоляция трубопроводов ИТП</div>
+      </div>
+
+      <div class="gallery-item" data-caption="Изоляция холодильных трасс — вспененный каучук">
+        <img src="images/work-2.jpg" alt="Изоляция холодильных трасс"
+             loading="lazy"
+             onerror="this.src='https://placehold.co/600x400/0b2239/ffb300?text=Работа+2+Холод'">
+        <div class="gallery-caption">Изоляция холодильных трасс</div>
+      </div>
+
+      <div class="gallery-item" data-caption="Металлическая окожушка трубопроводов — оцинковка">
+        <img src="images/work-3.jpg" alt="Металлическая окожушка трубопроводов"
+             loading="lazy"
+             onerror="this.src='https://placehold.co/600x400/0b2239/ffb300?text=Работа+3+Окожушка'">
+        <div class="gallery-caption">Окожушка из оцинковки</div>
+      </div>
+
+      <div class="gallery-item" data-caption="Термочехлы для запорной арматуры">
+        <img src="images/work-4.jpg" alt="Термочехлы для запорной арматуры"
+             loading="lazy"
+             onerror="this.src='https://placehold.co/600x400/0b2239/ffb300?text=Работа+4+Термочехлы'">
+        <div class="gallery-caption">Термочехлы для арматуры</div>
+      </div>
+
+      <div class="gallery-item" data-caption="Изоляция теплообменника теплового пункта">
+        <img src="images/work-5.jpg" alt="Изоляция теплообменника"
+             loading="lazy"
+             onerror="this.src='https://placehold.co/600x400/0b2239/ffb300?text=Работа+5+Теплообменник'">
+        <div class="gallery-caption">Изоляция теплообменника</div>
+      </div>
+
+      <div class="gallery-item" data-caption="Минеральная вата с окожушкой из нержавеющей стали">
+        <img src="images/work-6.jpg" alt="Минеральная вата с окожушкой из нержавейки"
+             loading="lazy"
+             onerror="this.src='https://placehold.co/600x400/0b2239/ffb300?text=Работа+6+Нержавейка'">
+        <div class="gallery-caption">Минвата + нержавейка</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightbox-close">&times;</span>
+  <img src="" alt="" id="lightbox-img">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<!-- ADVANTAGES -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Почему мы</h2>
+    <p class="section-sub">Работаем с объектами любого масштаба — от частных до промышленных</p>
+    <div class="adv-grid">
+      <div class="adv-item"><div class="num">15+</div><div class="label">лет опыта в теплоизоляции</div></div>
+      <div class="adv-item"><div class="num">МО</div><div class="label">Москва и Московская область</div></div>
+      <div class="adv-item"><div class="num">0 ₽</div><div class="label">бесплатный выезд на замер</div></div>
+      <div class="adv-item"><div class="num">100%</div><div class="label">гарантия на монтаж</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="container">
+    <h2>Нужен выезд специалиста на замер?</h2>
+    <p>Оставьте заявку — рассчитаем стоимость и сроки работ бесплатно</p>
+    <a href="tel:+79776306374" class="btn btn-primary">Позвонить: 8 977 630-63-74</a>
+  </div>
+</div>
+
+<!-- CONTACTS -->
+<section class="contacts" id="contacts">
+  <div class="container">
+    <h2 class="section-title">Контакты</h2>
+    <p class="section-sub">Свяжитесь удобным способом — ответим на все вопросы</p>
+    <div class="contact-grid">
+      <div class="contact-card"><h4>Телефон</h4><a href="tel:+79776306374">8 977 630-63-74</a></div>
+      <div class="contact-card"><h4>E-mail</h4><a href="mailto:vit727@mail.ru">vit727@mail.ru</a></div>
+      <div class="contact-card"><h4>Регион работы</h4><p>Москва и Московская область</p></div>
+      <div class="contact-card"><h4>Выезд на замер</h4><p>Бесплатно</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    © <span id="year"></span> Теплоизоляция трубопроводов и оборудования · Москва и МО ·
+    <a href="tel:+79776306374">8 977 630-63-74</a> ·
+    <a href="mailto:vit727@mail.ru">vit727@mail.ru</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Лайтбокс для галереи
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  const lbCaption = document.getElementById('lightbox-caption');
+  const lbClose = document.getElementById('lightbox-close');
+
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lbCaption.textContent = item.dataset.caption || '';
+      lightbox.classList.add('active');
+    });
+  });
+
+  lbClose.addEventListener('click', () => lightbox.classList.remove('active'));
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) lightbox.classList.remove('active');
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') lightbox.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
